@@ -43,6 +43,26 @@ void solve(){
         cout << max(dp[i][0], dp[i][1]) << " ";
     }
     cout << endl;
+    
+    // Another Possible Solution
+    /*
+    int n;
+    cin >> n;
+    vi last(n, -1), ans(n, 0);
+    
+    forn(i, n){
+        int z; cin >> z; --z;
+        if(last[z] != -1){
+            if((last[z]+i) & 1) ans[z]++, last[z] = i;
+        }
+        else last[z] = i, ans[z]++;
+    }
+    
+    forn(i, n){
+        cout << ans[i] << " ";
+    }
+    cout << endl;
+    */
 
 }
 
